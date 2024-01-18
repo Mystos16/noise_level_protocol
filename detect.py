@@ -19,8 +19,8 @@ try:
         
         #time
         filedate = time.strftime("%Y%m%d-%H%M%S")
-        filename = "/home/pi/noise/mp3/" + time.strftime("%Y%m%d") + "/" + filedate + ".mp3"
-        filename_csv = "/home/pi/noise/csv/" + time.strftime("%Y%m%d") + ".csv"
+        filename = "/home/techpro2/noise/mp3/" + time.strftime("%Y%m%d") + "/" + filedate + ".mp3"
+        filename_csv = "/home/techpro2/noise/csv/" + time.strftime("%Y%m%d") + ".csv"
         filedate_csv  = time.strftime("%Y-%m-%d %H:%M")
         terminal_time = time.strftime("%H:%M ")
         

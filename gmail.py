@@ -19,14 +19,14 @@ mp3_folder = tomorrow.strftime('%Y%m%d')
 
 #select random quotation for moral support
 line_number = random.randint(1, 7)    
-with open("/home/pi/noise/etc/quotes.csv") as f:
+with open("/home/techpro2/noise/etc/quotes.csv") as f:
     mycsv = csv.reader(f)
     mycsv = list(mycsv)
     quote = mycsv[line_number][0]
     autor = mycsv[line_number][1]
 
 #count recordings, *2 because of 2 min pieces
-numfiles = str(len([f for f in os.listdir("/home/pi/noise/mp3/"+mp3_folder) if os.path.isfile(os.path.join("/home/pi/noise/mp3/"+mp3_folder, f)) and f[0] != '.'])*2)
+numfiles = str(len([f for f in os.listdir("/home/techpro2/noise/mp3/"+mp3_folder) if os.path.isfile(os.path.join("/home/techpro2/noise/mp3/"+mp3_folder, f)) and f[0] != '.'])*2)
 
 me = "raspberry@.com"
 you = "you@.com"
@@ -87,19 +87,19 @@ part2 = MIMEText(html, 'html')
 # Attach parts into message container.
 # According to RFC 2046, the last part of a multipart message, in this case
 # the HTML message, is best and preferred.
-fp = open('/home/pi/noise/etc/q3.png', 'rb')
+fp = open('/home/techpro2/noise/etc/q3.png', 'rb')
 msgImage = MIMEImage(fp.read())
 fp.close()
 msgImage.add_header('Content-ID', '<image1>')
 msg.attach(msgImage)
 
-fp = open('/home/pi/noise/etc/q4.png', 'rb')
+fp = open('/home/techpro2/noise/etc/q4.png', 'rb')
 msgImage = MIMEImage(fp.read())
 fp.close()
 msgImage.add_header('Content-ID', '<image2>')
 msg.attach(msgImage)
 
-fp = open('/home/pi/noise/pic/'+pic_title+'.png', 'rb')
+fp = open('/home/techpro2/noise/pic/'+pic_title+'.png', 'rb')
 img = MIMEImage(fp.read())
 fp.close()
 img.add_header('Content-Disposition', 'attachment', filename=(pic_title+".png"))

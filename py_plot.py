@@ -16,7 +16,7 @@ from matplotlib.ticker import AutoMinorLocator
 
 tomorrow = date.today() - timedelta(days=1)
 
-filename_csv = "/home/pi/noise/csv/" + tomorrow.strftime("%Y%m%d") + ".csv"
+filename_csv = "/home/techpro2/noise/csv/" + tomorrow.strftime("%Y%m%d") + ".csv"
 i = int(tomorrow.strftime("%Y"))
 j = int(tomorrow.strftime("%m"))
 k = int(tomorrow.strftime("%d"))
@@ -86,4 +86,4 @@ plt.xlim(
 )
 fig.autofmt_xdate()
 fig.set_size_inches(14,10)
-plt.savefig('/home/pi/noise/pic/' + pic_title + '.png', bbox_inches='tight')
+plt.savefig('/home/techpro2/noise/pic/' + pic_title + '.png', bbox_inches='tight')

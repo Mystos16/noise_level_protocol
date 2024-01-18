@@ -9,5 +9,5 @@ from datetime import datetime, timedelta
 tomorrow = datetime.now() + timedelta(days=1)
 tomorrow_formatted = tomorrow.strftime('%Y%m%d')
 
-os.makedirs("/home/pi/noise/mp3/" + tomorrow_formatted);
+os.makedirs("/home/techpro2/noise/mp3/" + tomorrow_formatted);
 print("Path is created")
